@@ -6,7 +6,7 @@
 
         this.recordName = options.recordName || "result"; //for showing a count of results
         this.recordNamePlural = options.recordNamePlural || "results";
-        this.searchRadius = options.searchRadius || 805; //in meters ~ 1/2 mile
+        this.searchRadius = options.searchRadius || 8046.72; //in meters ~ 5 miles
 
         // the encrypted Table ID of your Fusion Table (found under File => About)
         this.fusionTableId = options.fusionTableId || "",
