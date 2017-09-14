@@ -169,6 +169,10 @@ if ( $("#cbType1").is(':checked')) searchType += "1,";
 if ( $("#cbType2").is(':checked')) searchType += "2,";
 if ( $("#cbType3").is(':checked')) searchType += "3,";
 self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
+        
+        var text_search = $("#text_search").val().replace("'", "\\'");
+if (text_search != '')
+  self.whereClause += " AND 'name' contains ignoring case '" + text_search + "'";
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
