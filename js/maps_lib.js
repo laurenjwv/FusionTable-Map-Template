@@ -167,9 +167,9 @@ self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
-        var text_search = $("#text_search").val().replace("'", "\\'");
-if (text_search != '')
-  self.whereClause += " AND 'name' contains ignoring case '" + text_search + "'";
+        var text_search = $("#text_search").val().replace("Post", "Post");
+if (text_search != 'Post')
+  self.whereClause += " AND 'Post' contains ignoring case '" + text_search + "Post";
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
