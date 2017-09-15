@@ -18,7 +18,7 @@
         // name of the location column in your Fusion Table.
         // NOTE: if your location column name has spaces in it, surround it with single quotes
         // example: locationColumn:     "'my location'",
-        this.locationColumn = options.locationColumn || "geometry";
+        this.locationColumn = options.locationColumn || "latitude" "longitude";
         
         // appends to all address searches if not present
         this.locationScope = options.locationScope || "";
@@ -116,7 +116,7 @@ self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
                 'address': address
             }, function (results, status) {
                 if (status === google.maps.GeocoderStatus.OK) {
-                    self.currentPinpoint = results[0].geometry.location;
+                    self.currentPinpoint = results[0].latitude, longitude.location;
                     var map = self.map;
 
                     $.address.parameter('address', encodeURIComponent(address));
